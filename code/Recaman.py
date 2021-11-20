@@ -50,7 +50,7 @@ def drawSeq(name):
 
     dwg = svgwrite.Drawing(filename=name, size = ('480','200'), debug=True)
 
-    pa = dwg.add(dwg.g(id='pa', fill='none', stroke='black', width = 2))
+    pa = dwg.add(dwg.g(id='pa', fill='none', stroke='black'))
 
     for i in xi:
         pa.add(dwg.path(d="M %d,%d A%d,%d 0 0 %d %d,%d" % i)) 
