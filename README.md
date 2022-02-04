@@ -1,2 +1,2 @@
 # banners
-Banners and things
+Banners for email signatures and things
