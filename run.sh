@@ -1,6 +1,8 @@
 
 cd code/
 
+lilypond --png -dresolution=600 -o"../banners/BalladeOp24.png" BalladeOp24.ly
+
 pdflatex --shell-escape -output-directory=../banners/ Einstein_quote01.tex
 
 pdflatex --shell-escape -output-directory=../banners/ Article1Section8.tex
