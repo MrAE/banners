@@ -1,7 +1,13 @@
 
 cd code/
 
+lilypond --png -dresolution=600 -o"../banners/Pray_High_Valyrian.png" Pray_High_Valyrian.ly
+
 lilypond --png -dresolution=600 -o"../banners/BalladeOp24.png" BalladeOp24.ly
+
+pdflatex --shell-escape -output-directory=../banners/ ModusPonens.tex
+
+pdflatex --shell-escape -output-directory=../banners/ ModusTollens.tex
 
 pdflatex --shell-escape -output-directory=../banners/ Einstein_quote01.tex
 
@@ -24,6 +30,8 @@ Rscript love.R
 convert -density 300 recaman_100.svg recaman_100.png
 #
 mv *.png ../banners/
+#
+latexmk -C *
 #
 cd ../banners/
 #
