@@ -1,0 +1,21 @@
+\documentclass[convert,float=false,crop=true]{standalone}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{lindenmayersystems} 
+
+\begin{document}
+
+\pgfdeclarelindenmayersystem{Hilbert curve}{
+\symbol{X}{\pgflsystemdrawforward}
+\symbol{+}{\pgflsystemturnright} % Explicitly define + and - symbols. 
+\symbol{-}{\pgflsystemturnleft}
+\rule{A -> +BX-AXA-XB+}
+\rule{B -> -AX+BXB+XA-}
+}
+
+\tikz\draw[lindenmayer system={Hilbert curve, axiom=A, order=4, angle=90}]
+  lindenmayer system;
+
+\end{document}
+
+

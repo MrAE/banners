@@ -19,6 +19,8 @@ pdflatex --shell-escape -output-directory=../banners/ rational_circle.tex
 
 xelatex --shell-escape -output-directory=../banners/ FirstAmendement.tex
 
+pdflatex --shell-escape -output-directory=../banners/ Hilbert_curve.tex
+
 python3 Recaman.py
 #
 Rscript Binet_Fibonacci.R
@@ -35,6 +37,6 @@ latexmk -C *
 #
 cd ../banners/
 #
-latexmk -C *
+latexmk -C -f *
 
 
