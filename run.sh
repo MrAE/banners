@@ -11,6 +11,8 @@ pdflatex --shell-escape -output-directory=../banners/ ModusTollens.tex
 
 pdflatex --shell-escape -output-directory=../banners/ Einstein_quote01.tex
 
+pdflatex --shell-escape -output-directory=../banners/ Colbrook_etal_2022.tex
+
 pdflatex --shell-escape -output-directory=../banners/ Article1Section8.tex
 
 pdflatex --shell-escape -output-directory=../banners/ HedgehogsAndFoxes.tex
