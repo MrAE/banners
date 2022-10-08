@@ -23,6 +23,8 @@ xelatex --shell-escape -output-directory=../banners/ FirstAmendement.tex
 
 pdflatex --shell-escape -output-directory=../banners/ Hilbert_curve.tex
 
+pdflatex --shell-escape -output-directory=../banners/ JohnGreen20221007.tex
+
 python3 Recaman.py
 #
 Rscript Binet_Fibonacci.R
@@ -35,7 +37,7 @@ convert -density 300 recaman_100.svg recaman_100.png
 #
 mv *.png ../banners/
 #
-latexmk -C *
+latexmk -C -f *
 #
 cd ../banners/
 #
