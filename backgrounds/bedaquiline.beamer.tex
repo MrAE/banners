@@ -1,0 +1,117 @@
+%%%
+\documentclass[xcolor=dvipsnames, aspectratio=169]{beamer}
+%\usepackage{beamerthemesplit, listings, verbatim}
+
+%\usepackage[absolute,overlay,showboxes]{textpos}
+\usepackage[absolute,overlay]{textpos}
+
+\usepackage{fontspec}
+
+\usepackage{graphicx,wrapfig}
+\usepackage{amsfonts,amsmath, amssymb, latexsym, amsthm}
+\usepackage{epsfig}
+\usepackage{float,enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{pifont}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{arrows}
+\usepackage{ulem}
+\usepackage{xcolor}
+\usepackage{chemfig}
+\usepackage{listings}
+\usepackage{qrcode}
+
+\definecolor{DarkBlue}{rgb}{0.15,0.0,0.9}
+\definecolor{Red}{rgb}{0.9,0.0,0.1}
+\definecolor{Colortest}{rgb}{0.1,0.55,0.1}
+\definecolor{Orange}{rgb}{0.75,0.3,0.3}
+\definecolor{JBlue}{HTML}{08399F}
+\definecolor{Purple}{HTML}{8243DB}
+\definecolor{aocbg}{HTML}{0F1022}
+\definecolor{aocfg0}{HTML}{1FCA23}
+\definecolor{aocfg1}{HTML}{106319}
+
+\setbeamertemplate{navigation symbols}{} % turns nav syms off
+\setbeamercolor{background canvas}{bg=aocbg}
+
+
+\title[Daily Notes]{A Beamer Template for notes}
+\subtitle[]{}
+\author[JLP]{Jesse L. Patsolic}
+
+
+\def\Title#1{\noindent{\large\textcolor{white}{\sf{#1}}}}
+\def\MTitle#1{\noindent{\large\textcolor{white}{\tt{#1}}}}
+
+\newcommand\Mygrid{%
+\tikz[
+  remember picture,
+  overlay,
+  color=white,
+  yscale=-1,
+  xstep=\TPHorizModule,ystep=\TPVertModule,
+  yshift=\TPVertModule,xshift=0pt]
+  \draw (current page.north west) grid (current page.south east);}
+
+\begin{document}
+
+%% Example of a full page figure.
+\begin{frame}[plain, fragile]
+%	\Mygrid
+%\begin{textblock}{11}(0,0)
+%    \Title{Jesse Leigh Patsolic, B.S., M.A.}
+%\end{textblock}
+%\makebox[\linewidth]{\includegraphics[height=0.95\paperheight]{logoBig.png}}
+
+\begin{textblock}{5}(0,1)
+	\scalebox{0.5}{
+	\begin{tikzpicture}[scale=0.05, color = white]
+	\begin{scope}[red]
+	%http://unitaid.org/assets/TMC_207_Patent_Landscape.pdf
+	% Figure 1.
+	\chemfig[cram width =
+	0.75ex]{\tt{Br}-[:30]*6(=-*6(-=(-(-[:-90](-(-[:-90](-\tt{N}(-[:-90]\tt{CH_3})(-[:30]\tt{CH_3}))))(-[:-180,,,,dashed]\tt{HO})<[:240]*6(-*6(-=-=-=)--=-=))(-[:60,,,,dashed]\tt{H})<[:0]*6(-=-=-=))-(-\tt{OCH_3})=\tt{N}-)=-=-)}
+	\end{scope}
+	\end{tikzpicture}
+}
+\end{textblock}
+
+
+\begin{textblock}{5}(0.125,9.75)
+{\color{red}
+\begin{lstlisting}[basicstyle=\tiny\ttfamily]
+@base <http://mrae.github.io/> .
+@prefix : <http://www.mrae.github.io/rdf-syntax#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Bedaquiline      a :Drug ;
+                  :name "Bedaquiline" ;
+                  :relatedEntity :Janssen , :Johnson\&Johnson ;
+                  :relatedInformation
+                   "http://unitaid.org/assets/TMC_207_Patent_Landscape.pdf" .
+
+:Janssen          a :pharmaceuticalCompany .
+:Johnson\&Johnson a :pharmaceuticalCompany .
+\end{lstlisting}
+}
+\end{textblock}
+
+\begin{textblock}{3}(13.5,1)
+	{\color{black!70}
+	\qrcode{http://unitaid.org/assets/TMC_207_Patent_Landscape.pdf}
+	}
+\end{textblock}
+
+
+\end{frame}
+
+
+\end{document}
+%%%
+%%% TIME: 
+%%% WORKING STATUS:
+%%% COMMENTS:
