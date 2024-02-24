@@ -1,0 +1,30 @@
+
+\documentclass[preview,border=0.80001bp, convert=imagemagick]{standalone}
+%\documentclass{article}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{miama}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+
+\newlength\unitlen
+\tikzset{
+    unit length/.code={\setlength{\unitlen}{#1}},
+    unit length = 8pt
+}
+
+\begin{document}
+\begin{tikzpicture}[line width=18pt]
+    \draw[line join = round, color=blue] 
+    (0,0.625) -- (2,0.625) -- (3,1.625) -- (4,1.625);
+
+    \draw[line join = round, color=black] 
+    (0,0) -- (4,0);
+
+    \draw[line join = round,color=red] 
+    (0,-0.625) -- (2,-0.625) -- (3,-1.625) -- (4,-1.625);
+    \node[circle,fill=white, radius=18pt] (c) at (1,0){};
+\end{tikzpicture}
+\end{document}
+
