@@ -86,13 +86,15 @@
 @base <http://mrae.github.io/> .
 @prefix : <http://www.mrae.github.io/rdf-syntax#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 
 :Bedaquiline      a :Drug ;
-                  :name "Bedaquiline" ;
+                  rdfs:label "Bedaquiline"@en ;
                   :relatedEntity :Janssen , :Johnson\&Johnson ;
-                  :relatedInformation
-                   "http://unitaid.org/assets/TMC_207_Patent_Landscape.pdf" .
+                  rdfs:seeAlso <http://unitaid.org/assets/TMC_207_Patent_Landscape.pdf> .
 
 :Janssen          a :pharmaceuticalCompany .
 :Johnson\&Johnson a :pharmaceuticalCompany .
