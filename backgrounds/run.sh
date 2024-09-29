@@ -13,3 +13,6 @@ xelatex background003.beamer.tex & \
 
 xelatex background004.beamer.tex & \ 
 	convert -density 1200 background004.beamer.pdf background004.png
+
+xelatex background005.beamer.tex & \ 
+	convert -density 1200 background005.beamer.pdf background005.png

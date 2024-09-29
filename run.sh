@@ -25,6 +25,8 @@ pdflatex --shell-escape -output-directory=../banners/ Hilbert_curve.tex
 
 pdflatex --shell-escape -output-directory=../banners/ JohnGreen20221007.tex
 
+xelatex --shell-escape -output-directory=../banners/ Earle1863_via_Bainbridge1984.tex
+
 python3 Recaman.py
 #
 Rscript Binet_Fibonacci.R
