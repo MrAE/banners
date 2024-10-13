@@ -1,0 +1,117 @@
+%%%
+\documentclass[xcolor=dvipsnames, aspectratio=169]{beamer}
+%\usepackage{beamerthemesplit, listings, verbatim}
+
+%\usepackage[absolute,overlay,showboxes]{textpos}
+\usepackage[absolute,overlay]{textpos}
+
+\usepackage{fontspec}
+
+\usepackage{graphicx,wrapfig}
+\usepackage{amsfonts,amsmath, amssymb, latexsym, amsthm}
+\usepackage{epsfig}
+\usepackage{float,enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{pifont}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{arrows}
+\usepackage{ulem}
+\usepackage{xcolor}
+\usepackage{qrcode}
+
+\definecolor{DarkBlue}{rgb}{0.15,0.0,0.9}
+\definecolor{DarkRed}{rgb}{0.4,0.0,0.0}
+\definecolor{Red}{rgb}{0.9,0.0,0.1}
+\definecolor{Colortest}{rgb}{0.1,0.55,0.1}
+\definecolor{Orange}{rgb}{0.75,0.3,0.3}
+\definecolor{JBlue}{HTML}{08399F}
+\definecolor{Purple}{HTML}{8243DB}
+\definecolor{aocbg}{HTML}{0F1022}
+\definecolor{aocfg0}{HTML}{1FCA23}
+\definecolor{aocfg1}{HTML}{106319}
+\definecolor{Peach}{HTML}{EDD1B0}
+
+\setbeamertemplate{navigation symbols}{} % turns nav syms off
+\setbeamercolor{background canvas}{bg=aocbg}
+
+
+\title[Daily Notes]{A Beamer Template for notes}
+\subtitle[]{}
+\author[JLP]{Jesse L. Patsolic}
+
+
+\def\Title#1{\noindent{\large\textcolor{white}{\sf{#1}}}}
+\def\MTitle#1{\noindent{\large\textcolor{white}{\tt{#1}}}}
+
+\newcommand\rotpi{\rotatebox[origin=c]{180}{$\mathtt{\pi}$}}
+\newcommand\copi{\reflectbox{\rotpi}}
+
+\newcommand\Mygrid{%
+\tikz[
+  remember picture,
+  overlay,
+  color=white,
+  yscale=-1,
+  xstep=\TPHorizModule,ystep=\TPVertModule,
+  yshift=\TPVertModule,xshift=0pt]
+  \draw (current page.north west) grid (current page.south east);}
+
+
+
+\begin{document}
+
+%% Example of a full page figure.
+\begin{frame}[plain]
+\begin{textblock}{3}(1,1)
+    \hfill
+    {\color{DarkRed}
+    \huge{
+	\begin{align*}
+	    \copi &= \mathtt{10^{2n+4} + 666 \times 10^{n+1} + 1\ |\ n=13}\\
+	    %B_{13} &= 10^{2n+4} + 666 \times 10^{n+1} + 1\\
+	    &= \mathtt{1000000000000066600000000000001}
+	\end{align*}
+    }
+}
+    \hfill
+\end{textblock}
+
+%\begin{textblock}{3.25}(12,10)
+%    \hspace{1mm}
+%	{\color{black!70}
+%	\qrcode{https://en.wikipedia.org/wiki/Belphegor\%27s\_prime}
+%	}\\%
+%	{\color{black!70}
+%	{\small
+%	\begin{tabular}{l}
+%	wikipedia.org:\\ 
+%	Belphegor's prime
+%	\end{tabular}
+%	}
+%	}
+%\end{textblock}
+\begin{textblock}{3.25}(12,10)
+    \hspace{1mm}
+	{\color{black!70}
+	\qrcode{https://mathworld.wolfram.com/BelphegorPrime.html}
+	}\\%
+	{\color{black!70}
+	{\small
+	\begin{tabular}{l}
+	mathworld:\\ 
+	The Belphegor prime
+	\end{tabular}
+	}
+	}
+\end{textblock}
+\end{frame}
+
+
+\end{document}
+%%%
+%%% TIME: 
+%%% WORKING STATUS:
+%%% COMMENTS:
