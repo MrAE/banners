@@ -1,0 +1,115 @@
+%%
+\documentclass[xcolor=dvipsnames, aspectratio=169]{beamer}
+%\usepackage{beamerthemesplit, listings, verbatim}
+
+%\usepackage[absolute,overlay,showboxes]{textpos}
+\usepackage[absolute,overlay]{textpos}
+
+\usepackage{fontspec}
+
+\usepackage{graphicx,wrapfig}
+\usepackage{amsfonts,amsmath, amssymb, latexsym, amsthm}
+\usepackage{epsfig}
+\usepackage{float,enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{pifont}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{arrows}
+\usepackage{ulem}
+\usepackage{xcolor}
+\usepackage{qrcode}
+
+\definecolor{DarkBlue}{rgb}{0.15,0.0,0.9}
+\definecolor{DarkRed}{rgb}{0.4,0.0,0.0}
+\definecolor{Red}{rgb}{0.9,0.0,0.1}
+\definecolor{Colortest}{rgb}{0.1,0.55,0.1}
+\definecolor{Orange}{rgb}{0.75,0.3,0.3}
+\definecolor{JBlue}{HTML}{08399F}
+\definecolor{Purple}{HTML}{8243DB}
+\definecolor{aocbg}{HTML}{0F1022}
+\definecolor{aocfg0}{HTML}{1FCA23}
+\definecolor{aocfg1}{HTML}{106319}
+\definecolor{Peach}{HTML}{EDD1B0}
+
+\setbeamertemplate{navigation symbols}{} % turns nav syms off
+\setbeamercolor{background canvas}{bg=black}
+
+
+
+\title[Daily Notes]{A Beamer Template for notes}
+\subtitle[]{}
+\author[JLP]{Jesse L. Patsolic}
+
+
+\def\Title#1{\noindent{\large\textcolor{white}{\sf{#1}}}}
+\def\MTitle#1{\noindent{\large\textcolor{white}{\tt{#1}}}}
+
+\newcommand\rotpi{\rotatebox[origin=c]{180}{$\mathtt{\pi}$}}
+\newcommand\copi{\reflectbox{\rotpi}}
+
+\newcommand\Mygrid{%
+\tikz[
+  remember picture,
+  overlay,
+  color=white,
+  yscale=-1,
+  xstep=\TPHorizModule,ystep=\TPVertModule,
+  yshift=\TPVertModule,xshift=0pt]
+  \draw (current page.north west) grid (current page.south east);}
+
+
+
+%\setmainfont{Sebaldus-Gotisch}[
+%	Path=./FontFiles/,
+%    Scale=0.85,
+%    Extension = .ttf,
+%    UprightFont=*
+%]
+
+\begin{document}
+
+%% Example of a full page figure.
+\begin{frame}[plain]
+\begin{textblock}{3.25}(1,1)
+    {\color{gray!!50}
+\tiny
+\textbf{The New Colossus}\\
+
+Not like the brazen giant of Greek fame,
+With conquering limbs astride from land to land;
+Here at our sea-washed, sunset gates shall stand
+A mighty woman with a torch, whose flame
+Is the imprisoned lightning, and her name
+Mother of Exiles. From her beacon-hand
+Glows world-wide welcome; her mild eyes command
+The air-bridged harbor that twin cities frame.
+``Keep, ancient lands, your storied pomp!'' cries she
+With silent lips. ``Give me your tired, your poor,
+Your huddled masses yearning to breathe free,
+The wretched refuse of your teeming shore.
+Send these, the homeless, tempest-tost to me,
+I lift my lamp beside the golden door!''\\
+
+
+\textbf{Emma Lazarus}
+
+\textbf{November 2, 1883}
+}
+\end{textblock}
+
+\begin{textblock}{5}(11.75,0.375)
+\includegraphics[height=0.98\textheight]{Statue_of_Liberty_DoG_0_1_5.png}
+%\includegraphics[height=0.98\textheight]{Statue_of_Liberty_DoG_0_1_5_LIGHT.png}
+
+\end{textblock}
+\end{frame}
+
+
+\end{document}
+%%%
+%%% TIME: 
+%%% WORKING STATUS:
+%%% COMMENTS:
