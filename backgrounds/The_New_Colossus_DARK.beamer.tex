@@ -37,6 +37,27 @@
 \setbeamertemplate{navigation symbols}{} % turns nav syms off
 \setbeamercolor{background canvas}{bg=black}
 
+%\setromanfont{Jacquard24}[
+%    Scale=1.25,
+%    Path=./FontFiles/Jacquard_24/,
+%    Extension = .ttf,
+%    UprightFont=*-Regular
+%    ]
+
+\setmainfont{Sebaldus-Gotisch}[
+    Path=./FontFiles/,
+    Scale=0.85,
+    Extension = .ttf,
+    UprightFont=*
+]
+
+\setromanfont{OpenDyslexic}[
+    Scale=0.75,
+    Path=./FontFiles/opendyslexic-0.91.12/compiled/,
+    Extension = .otf,
+    UprightFont=*-Regular
+    ]
+
 
 
 \title[Daily Notes]{A Beamer Template for notes}
@@ -62,42 +83,39 @@
 
 
 
-%\setmainfont{Sebaldus-Gotisch}[
-%	Path=./FontFiles/,
-%    Scale=0.85,
-%    Extension = .ttf,
-%    UprightFont=*
-%]
-
 \begin{document}
 
 %% Example of a full page figure.
 \begin{frame}[plain]
-\begin{textblock}{3.25}(1,1)
-    {\color{gray!!50}
+\begin{textblock}{5}(1,1)
+{\color{gray!!50}
+\rm
 \tiny
+%\small
 \textbf{The New Colossus}\\
 
-Not like the brazen giant of Greek fame,
-With conquering limbs astride from land to land;
-Here at our sea-washed, sunset gates shall stand
-A mighty woman with a torch, whose flame
-Is the imprisoned lightning, and her name
-Mother of Exiles. From her beacon-hand
-Glows world-wide welcome; her mild eyes command
-The air-bridged harbor that twin cities frame.
-``Keep, ancient lands, your storied pomp!'' cries she
-With silent lips. ``Give me your tired, your poor,
-Your huddled masses yearning to breathe free,
-The wretched refuse of your teeming shore.
-Send these, the homeless, tempest-tost to me,
+Not like the brazen giant of Greek fame,\\
+With conquering limbs astride from land to land;\\
+Here at our sea-washed, sunset gates shall stand\\
+A mighty woman with a torch, whose flame\\
+Is the imprisoned lightning, and her name\\
+Mother of Exiles. From her beacon-hand\\
+Glows world-wide welcome; her mild eyes command\\
+The air-bridged harbor that twin cities frame.\\
+``Keep, ancient lands, your storied pomp!''\\ 
+    cries she\\
+With silent lips. ``Give me your tired, your poor,\\
+Your huddled masses yearning to breathe free,\\
+The wretched refuse of your teeming shore.\\
+Send these, the homeless, tempest-tost to me,\\
 I lift my lamp beside the golden door!''\\
-
+\vphantom{|}
 
 \textbf{Emma Lazarus}
 
 \textbf{November 2, 1883}
 }
+
 \end{textblock}
 
 \begin{textblock}{5}(11.75,0.375)
