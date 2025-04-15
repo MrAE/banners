@@ -1,0 +1,29 @@
+\documentclass[letterpaper]{article}
+\usepackage[paperwidth=8.5in, paperheight=11in, margin=0in]{geometry}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{pgffor}
+\pagestyle{empty}
+
+% Set to a bold display font installed on your system
+%\setmainfont{Anton} % Or Bebas Neue, Impact, etc.
+\setromanfont{Anton}[
+    Path=./Anton/,
+    Extension = .ttf,
+    UprightFont=*-Regular
+    ]
+
+\begin{document}
+
+% Loop over each character
+\foreach \letter in {W, i, l, l, f, u, l, ~, I, g, n, o, r, a, n, c, e, ~, i, s, ~, N, o, t, ~, a, n, ~, E, x, c, u, s, e} {
+    \vspace*{\fill}
+    \begin{center}
+        {\fontsize{600pt}{600pt}\selectfont \letter}
+    \end{center}
+    \vspace*{\fill}
+    \newpage
+}
+
+\end{document}
+
